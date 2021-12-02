@@ -7,6 +7,7 @@ import { HeaderComponent } from './nav/header/header.component';
 import { FooterComponent } from './nav/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { QuiensoyComponent } from './pages/quiensoy/quiensoy.component';
+import { SolicitudconsultaComponent } from './pages/solicitudconsulta/solicitudconsulta.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { QuiensoyComponent } from './pages/quiensoy/quiensoy.component';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    QuiensoyComponent
+    QuiensoyComponent,
+    SolicitudconsultaComponent
   ],
   imports: [
     BrowserModule,
