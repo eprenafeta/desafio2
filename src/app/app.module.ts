@@ -8,6 +8,7 @@ import { FooterComponent } from './nav/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { QuiensoyComponent } from './pages/quiensoy/quiensoy.component';
 import { SolicitudconsultaComponent } from './pages/solicitudconsulta/solicitudconsulta.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SolicitudconsultaComponent } from './pages/solicitudconsulta/solicitudc
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

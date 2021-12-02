@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-solicitudconsulta',
@@ -7,17 +7,25 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./solicitudconsulta.component.css']
 })
 export class SolicitudconsultaComponent implements OnInit {
-  frmConsultaMedica = new FormGroup( {
-    nombre :  new FormControl('', Validators.required),
-    apellido :  new FormControl('', Validators.required) ,
-    correo :  new FormControl('', Validators.email) ,
-    tipo_practica :  new FormControl('', Validators.required) ,
-    descripcion : new FormControl('', Validators.required) 
-   
+  
+  frmConsultaMedica = this.fb.group ( {
+    nombre :   [ '', Validators.required ],
+    apellido :   [ '', Validators.required ],
+    correo :   [ '', Validators.email ],
+    tipo_practica : [ '', Validators.required ],
+    descripcion :  [ '',  Validators.required ] 
   });
-  constructor() { }
 
+  submitted = false
+  constructor( private fb: FormBuilder ) { }
   ngOnInit(): void {
+    
+    
+    
+  }
+
+  guardar() {
+    console.log(this.frmConsultaMedica)
   }
 
 }
